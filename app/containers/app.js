@@ -30,6 +30,8 @@ class App extends Component {
                     <Navigator
                     initialRoute={initialRoute}
                     renderScene = {(route,navigator) => {
+                        global.seedApp.route = route;
+                        global.seedApp.navigator = navigator;
                         let Component = route.component;
                         return (
                             <View style={{flex:1}}>
